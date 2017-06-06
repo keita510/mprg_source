@@ -4,7 +4,7 @@ import os
 import cv2
 import numpy as np
 #入力画像のパス
-img_path = "/home/keita/trainaisin/"
+img_path = "/home/keita/"
 
 def main(img_path):
 	#画像の読み込み
@@ -81,10 +81,6 @@ def main(img_path):
                                 	img.itemset((y,x,1),0)
                                 	img.itemset((y,x,2),0)
 
-	# RGBからグレースケール
-     #   gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-	#画像の保存
-#	cv2.imwrite("./hyouka/0000000.bmp", img);
 		cv2.imwrite("./outgray/"+str(num+1)+".bmp", img)  #出力画像
 		print(str(num+1)+"image was saved.")
 	
